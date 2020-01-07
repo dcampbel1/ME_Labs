@@ -1,0 +1,273 @@
+\documentclass[12pt]{article}
+\headheight=-1.0in
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+%\usepackage{hyperref}
+%\textwidth=6.9in
+%\hoffset=-0.825inx
+%\headheight=-0.8in
+\textheight=9.4in
+%\pagestyle{empty}
+\begin{document}
+\begin{center}
+%\begin{large}
+{\bf Steam Turbine Power Production}\\ 
+\vskip12pt 
+ENG ME 304 Energy and Thermodynamics\\
+Spring 2019
+%{\bf Summer 2015}\\[0.25in]
+%\end{large}
+\end{center}
+\vspace*{-12pt}
+
+\section*{\normalsize \bf 1. Introduction}
+
+\hspace*{\parindent} Most electrical power for residential and
+industrial use in this country is produced by steam power plants.
+In this laboratory exercise, you will operate a laboratory-scale
+system in which a steam-powered turbine is used to generate
+electrical power.  Pressure, temperature and mass flow 
+data recorded during steady-state operation of the system will be
+used to calculate some thermodynamic efficiencies of the power 
+production process.
+
+\section*{\normalsize \bf 2. Experimental Apparatus}
+
+A schematic of the experimental system is shown in Fig.\ 1.  The
+components of the system are a propane-fueled boiler to produce
+steam, a throttling valve to control the flow of steam from the
+boiler, a steam turbine that converts the thermodynamic energy
+of the steam into mechanical energy, a generator \linebreak
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=4.25in]{turbinelab_edited.pdf}
+\caption{Components of steam turbine power system.}
+\label{default}
+\end{center}
+\end{figure}
+
+
+%\vskip-4pt
+%\centerline{\psfig{figure=turbinelab.eps,scale=1.00}}
+%\vskip16pt
+%\centerline{Fig.\ 1. Components of steam turbine power system.}
+
+\pagebreak
+
+\noindent that converts the
+mechanical energy of the turbine into electrical energy, a rheostat
+that acts as a variable electrical load on the generator, and
+a condenser that collects the output steam from the turbine.
+Sensors are installed to measure the pressure and temperature
+of the water at points 1, 2, 3, 4, and 5.  In addition, voltage 
+and current meters are installed at the output of the electrical
+generator, and a flow meter is installed to measure the 
+flow rate of propane into the boiler. \\
+
+\noindent \textbf{Guidance questions}: During the start-up procedure, discuss the following issues and questions:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\alph{enumi}.)}
+%	\item One of the lab goals is to determine the isentropic efficiency $\eta_t$ of the turbine in this system, in terms of the enthalpies involved (see Eq. \ref{Eq:Effic}). What experimental data is necessary to gather, in order to calculate $\eta_t$? Where should these instruments be positioned, in the experimental setup?
+	\item An important goal of power plant operation is to produce a predictable and constant level of electrical power. Many factors will, however, cause the power to fluctuate. Brainstorm a list of factors that could contribute to such fluctuation, and then brainstorm a corresponding general solution to each factor.
+%	\item Ultimately, a rheostat is a helpful solution to have in this context. Briefly research (e.g., Wikipedia on your phone...) this device. Why is this device helpful for a power plant?
+	\item Consider this power plant and the operating conditions (the state property values) that are likely involved. Brainstorm the possible safety issues that could be involved, and the steps that could be implemented to avoid them.
+	\item Discuss the role that the throttling valve (labeled as "Steam admission") plays in this operation, and how it relates to the generator voltage. If the boiler is fully pressurized and the valve is closed, what will the generator voltage read? Conversely, if the boiler is at a high steady-state pressure and the valve is slowly opened, how will the generator voltage change?
+	\item The prelab asked you to brainstorm the steps that would be necessary to bring the system up to ``steady state" conditions. Now that you see the equipment, discuss with your group the steps that you've already considered and compare these with the experimental apparatus that you're using.
+\end{enumerate}
+%\pagebreak
+\section*{\normalsize \bf 3. Start-up Procedure}
+
+\begin{enumerate}
+
+\item Turn the keyed master switch, the burner switch, the load
+switch, and the operator panel gas valve OFF.
+
+\item Turn the load knob to the minimum position.
+
+\item Drain the condenser tower.
+
+\item OPEN the stream throttle valve.
+
+\item Drain the boiler.
+
+\item Fill the boiler with 5500 ml of distilled water.
+
+\item CLOSE the steam throttle valve.
+
+\item Turn the computer data acquisition system ON.
+
+\item Turn the regulator on the propane tank ON.
+
+\item Turn the operator panel gas valve ON.
+
+\item Turn the keyed master switch ON.
+
+\item Turn the burner switch ON.  The propane burner in the boiler 
+should light within 45 seconds, and the boiler pressure should  
+begin to increase within an additional three minutes.  If the
+boiler pressure does not increase within three minutes, turn the burner
+switch to OFF and seek help from the teaching assistant.
+
+\item Allow the boiler pressure to rise to 120 psi (827 kPa).
+
+\item Turn the load switch ON.  Turn the steam throttle value to
+OPEN.  Monitor the boiler pressure until it falls to 50 psi (345 kPa). 
+While monitoring the boiler pressure, adjust the load knob so
+that the generator voltage does not exceed 9 volts and the 
+turbine speed indicator does not display the red excess speed light.    
+
+\item CLOSE the steam throttle valve.  
+
+\item Turn the load knob to the minimum position and turn the
+load switch OFF.
+
+\item Allow the boiler pressure to rise to 120 psi (827 kPa).
+
+\end{enumerate}
+
+\section*{\normalsize \bf 4. Steady-state Operation}
+
+After the start-up procedure is complete, steady-state operation is 
+achieved by performing the following steps.
+
+\begin{enumerate}  
+
+\item OPEN the steam throttle valve SLOWLY until the generator output is
+9 volts and the boiler pressure is constant at 120 psi (827 kPa).
+
+\item Turn the load switch ON.
+
+\item Adjust the load knob and the steam throttle iteratively
+until the generator voltage is 9 volts, the generator current is
+0.3 amps, and the boiler pressure is 120 psi (827 kPa).  These
+are the desired values for steady state operation.
+
+\item When the desired steady-state operating condition has been 
+achieved, record the position of the water level indicator on the 
+boiler and the time (you'll need these values to determine the mass flow rate).  The boiler pressure will slowly decrease as the water level 
+in the boiler drops.  Let the system run until the boiler pressure
+has decreased by 10\%.  Record the position of the water level indicator
+on the boiler at this time: Clicking the 'Log data to file' icon will start the data acquisition, and clicking it again will stop and save it. Make sure to either email the data file to a member of your group or transfer it via a USB drive.
+
+\end{enumerate}
+
+\section*{\normalsize \bf 5. Shutdown}
+
+\begin{enumerate}
+
+\item Record the time (again, you'll need this for the mass flow rate calculation).
+
+\item Turn the steam throttle valve to the CLOSED position.
+
+\item Turn the burner switch OFF.
+
+\item Turn the operator panel gas valve OFF.
+
+\item Turn the load knob to the minimum position,.
+
+\item Turn the load switch OFF.
+
+\item Turn the keyed master switch OFF.
+
+\item SLOWLY OPEN the steam throttle valve, making sure that
+the generator voltage does not exceed 9 volts, until the
+remaining boiler pressure is exhausted.
+
+\item Drain the condenser tower into a graduated container, and record
+the volume of water.  Do not fill the boiler with water from the
+condenser tower.
+
+\item When the boiler has cooled and the boiler pressure is
+atmospheric, OPEN the steam throttle valve to vent the boiler.
+
+\item Fill the boiler until the water level indicator reaches 
+the position noted at the beginning of the steady-state operation.
+
+\item Drain the boiler into a graduated container until the 
+water level indicator reaches the position noted at the end
+of the steady-state operation.  Record the volume of the
+water in the graduated container.
+
+\end{enumerate}
+
+\section*{\normalsize \bf 5. Calculations}
+
+\begin{enumerate}
+
+\item For an ideal throttling device that operates at steady state,
+the specific enthalpy at the input of the throttle is equal to 
+the specific enthalpy 
+at the output of the throttle.  Use the experimental data 
+for steady-state operation to compute
+the enthalpy at the input and output of the actual steam throttle
+valve.  
+%To what extent is the throttle valve ideal? 
+
+\item The isentropic efficiency $\eta_{t}$ of the turbine is defined
+as 
+\begin{equation}
+\label{Eq:Effic}
+\eta_{t} = \frac{\dot{W}_{t}/\dot{m}_{s}}
+{(\dot{W}_{t})_{s}/\dot{m}_{s}} = 
+\frac{h_{2} - h_{3}}{h_{2} - h_{3s}}, 
+\end{equation}
+where $\dot{W}_{t}$ is the actual turbine power output, 
+$(\dot{W}_{t})_{s}$ is the power output of a hypothetical turbine 
+that operates between the actual input state 2 of the turbine
+and a hypothetical output state $3s$ with pressure $p_{3}$ and 
+specific entropy $s_{3s} = s_{2}$, $h_{2}$ is the specific enthalpy 
+at the actual input state 2, $h_{3}$ is the specific enthalpy 
+at the actual output state 3, and $h_{3s}$ is the specific enthalpy 
+at the hypothetical output state $3s$.  Use the experimental
+data for steady-state operation to compute the isentropic efficiency 
+for the turbine of this system.  
+
+\item The steady-state form of the First Law for a control
+volume containing the turbine and generator is 
+\begin{equation} 
+0 = \dot{Q} - \dot{W}_{e} + \dot{m}_{s}(h_{2} - h_{3}),
+\label{Eq:1st}
+\end{equation}
+where $\dot{Q}$ is the rate of heat transfer to the 
+turbine and generator, $\dot{W}_{e}$ is the electrical power 
+out of the generator, $\dot{m}_{s}$ is the mass flow rate of 
+steam through the turbine, $h_{2}$ is the specific enthalpy of the steam
+that enters the turbine, and $h_{3}$ is the specific enthalpy
+of the steam that leaves the turbine.  An efficiency $e_{TG}$
+for the turbine and generator can be defined as
+\begin{equation}
+e_{TG} = \frac{\dot{W}_e}{\dot{m}_{s}(h_{2} - h_{3})}.
+\end{equation}
+If the rate of heat transfer $\dot{Q}$ in equation \ref{Eq:1st} is zero,
+the efficiency $e_{TG}$ is equal to one.  Use the experimental
+data for steady-state operation to calculate the efficiency 
+$e_{TG}$ for the actual turbine and generator of this system.
+
+\item The heating value\footnote{M. J. Moran et al., {\em Fundamentals
+of Engineering Thermodynamics}, 8th ed., 2014, Secs.13.1--13.2.} $q_p$
+of propane is 
+\begin{equation}
+q_{p} = \mbox{19,950 Btu/lbm}.
+\end{equation}
+An overall efficiency parameter $e$ for the production of 
+electrical power in this laboratory system may be defined as 
+\begin{equation}
+e = \frac{\dot{W}_{e}}{\dot{m}_{p}q_{p}},
+\end{equation}
+where $\dot{W}_{e}$ is the electrical power output of the 
+generator and $\dot{m}_{p}$ is the mass flow rate of the propane 
+during the steady-state operation of the system.  Use the experimental
+data for steady-state operation to compute the overall efficiency 
+$e$ of this experimental system.   
+%What do you
+%conclude about the practicality of this system for the
+%production of electrical power?
+
+
+\end{enumerate}
+
+\end{document}
+
+
